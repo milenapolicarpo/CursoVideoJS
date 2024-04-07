@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sua Residência</title>
+</head>
+<body>
+    <h1>Nacionalidade</h1>
+    Qual é o seu país? <input type="name" name="pais" id="pais">
+    <input type="button" value="Consulte" onclick="confirmar()">
+    <div id="nac"> 
+
+    </div>
+    <script>
+        function confirmar(){
+            var paisp = window.document.getElementById('pais') 
+            var nac = window.document.getElementById('nac')  
+            var res = String(paisp.value) //nacio
+            res.innerHTML = `<p>Seu país de origem é de ${res}</p>`
+            if (res == 'Brasil') {
+                nac.innerHTML = 'Você é Brasileiro!'
+            } else {
+                nac.innerHTML = 'Você é Estrangeiro!'
+
+            }
+
+        }
+    </script>
+
+</body>
+</html>
